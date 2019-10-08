@@ -18,6 +18,7 @@
   <component name="ProjectId" id="1RukMEvZS0yIz1XhrV8BEQuXSDm" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -56,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570524318638</updated>
       <workItem from="1570524323063" duration="2916000" />
+      <workItem from="1570542407120" duration="1458000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class MyLCG {
     private int modulus;
     private int a;
@@ -16,7 +18,12 @@ public class MyLCG {
         }
     }
     public static void main(String[] args){
-        MyLCG mylcg=new MyLCG(32,2,2,5);
-        mylcg.generate();
+//        MyLCG mylcg=new MyLCG(32,2,2,5);
+//        mylcg.generate();
+        readRandom random=new readRandom();
+        ArrayList<Integer> num=random.read();
+        Verification v=new Verification();
+        double result=v.veri(num);
+        System.out.println(result);
     }
 }
