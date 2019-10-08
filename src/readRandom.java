@@ -16,10 +16,9 @@ public class readRandom {
 		
 	}
 	
-	public void read() {
+	public ArrayList<Integer> read() {
+		ArrayList<Integer> result = new ArrayList<>();
 		try {
-			ArrayList<Integer> result = new ArrayList<>();
-			
 			BufferedReader bReader = new BufferedReader(new FileReader("random_numbers.txt"));
 			String number = bReader.readLine();
 			while(number != null) {
@@ -40,6 +39,7 @@ public class readRandom {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return result;
 		
 		
 	}
