@@ -11,19 +11,30 @@ public class MyLCG {
     this.c=c;
     this.seed=seed;
     }
-    public void generate(){
-        for(int i=0;i<100;i++){
+    public ArrayList<Integer> generate(){
+        ArrayList<Integer> random=new ArrayList<Integer>();
+        for(int i=0;i<10000;i++){
             seed=(a*seed+c)%modulus;
-            System.out.println(seed);
+            random.add(seed);
         }
+        return random;
     }
     public static void main(String[] args){
-//        MyLCG mylcg=new MyLCG(32,2,2,5);
-//        mylcg.generate();
+        Verification v=new Verification();
+        Verification_auto v2=new Verification_auto();
+        MyLCG mylcg=new MyLCG(100,41,7,1);
+        ArrayList<Integer> Mynum=mylcg.generate();
+
+        double MyresultR=v2.veri(Mynum);
+        double Myresult=v.veri(Mynum);
+        System.out.println(Myresult);
+        System.out.println("R    :"+MyresultR);
+
         readRandom random=new readRandom();
         ArrayList<Integer> num=random.read();
-        Verification v=new Verification();
         double result=v.veri(num);
+        double resultR=v2.veri(num);
         System.out.println(result);
+        System.out.println("R    :"+resultR);
     }
 }
