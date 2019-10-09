@@ -22,7 +22,7 @@ public class MyLCG {
     public static void main(String[] args){
         Verification v=new Verification();
         Verification_auto v2=new Verification_auto();
-        MyLCG mylcg=new MyLCG(10000,3549,5233,(int) (System.nanoTime()%100));
+        MyLCG mylcg=new MyLCG(10000,3549,5233,(int) ((System.nanoTime()/100)%100));
 //        MyLCG mylcg=new MyLCG(100,41,7,6);
         ArrayList<Integer> Mynum=mylcg.generate();
 
