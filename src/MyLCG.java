@@ -15,16 +15,15 @@ public class MyLCG {
         ArrayList<Integer> random=new ArrayList<Integer>();
         for(int i=0;i<10000;i++){
             seed=(a*seed+c)%modulus;
-            random.add(seed);
+            random.add(Math.round(seed*100/modulus));
         }
         return random;
     }
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        MyLCG mylcg = new MyLCG(10000, 3549, 5233, (int) ((System.nanoTime() / 100) % 100));
+        ArrayList<Integer> Mynum = mylcg.generate();
         Verification v=new Verification();
         Verification_auto v2=new Verification_auto();
-        MyLCG mylcg=new MyLCG(100,41,7,1);
-        ArrayList<Integer> Mynum=mylcg.generate();
-
         double MyresultR=v2.veri(Mynum);
         double Myresult=v.veri(Mynum);
         System.out.println(Myresult);
